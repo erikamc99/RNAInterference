@@ -20,4 +20,10 @@ public class DnaTest {
     public void emptySequenceTest() {
         assertThrows(IllegalArgumentException.class, () -> new DNA(""));
     }
+
+    @Test
+    @DisplayName("Test para comprobar que no se puede introducir una secuencia null")
+    public void nullSequenceTest() {
+        assertThrows(IllegalArgumentException.class, () -> new DNA(null));
+    }
 }
