@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 public class DnaTest {
     @Test
-    @DisplayName("Testo para obtener la secuencia de ADN")
+    @DisplayName("Test para obtener la secuencia de ADN")
     public void getSequence() {
         DNA sequence = new DNA("GCTA");
 
