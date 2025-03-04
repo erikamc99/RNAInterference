@@ -4,7 +4,7 @@ public class DNA {
     private final String sequence;
 
     public DNA(String sequence) {
-        if (sequence.isEmpty()) {
+        if (sequence == null || sequence.isEmpty()) {
             throw new IllegalArgumentException("❌ La secuencia de ADN no puede estar vacía.");
         }
         this.sequence = sequence;
