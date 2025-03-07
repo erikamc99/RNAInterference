@@ -8,9 +8,12 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class DnaTranscriberTest {
+
+    private final DnaTranscriber transcriber = new DnaTranscriber();
+
     @Test
     @DisplayName("Test para comprobar el mapeo de las posibles cadenas de ADN")
-    void transcriptionTest() {
+    void mapTranscriptionTest() {
         Map<Character, Character> map = DnaTranscriber.getTranscriptionMap();
 
         assertEquals('C', map.get('G'));
@@ -19,5 +22,12 @@ public class DnaTranscriberTest {
         assertEquals('U', map.get('A'));
         assertNull(map.get('X'));
         assertNull(map.get(' '));
+    }
+
+    @Test
+    @DisplayName("Test para comprobar que la interfaz está implementada")
+    void transcriptionTest() {
+        DNA sequence = new DNA("GCTA");
+        assertEquals("CGAU", transcriber.transcribe(sequence));
     }
 }
