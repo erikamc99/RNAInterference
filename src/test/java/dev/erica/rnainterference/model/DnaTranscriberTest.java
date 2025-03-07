@@ -3,6 +3,7 @@ package dev.erica.rnainterference.model;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 import org.junit.jupiter.api.Test;
 
 public class DnaTranscriberTest {
@@ -14,5 +15,7 @@ public class DnaTranscriberTest {
         assertEquals('G', map.get('C'));
         assertEquals('A', map.get('T'));
         assertEquals('U', map.get('A'));
+        assertNull(map.get('X'));
+        assertNull(map.get(' '));
     }
 }
