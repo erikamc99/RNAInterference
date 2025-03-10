@@ -18,13 +18,13 @@ public class DnaTest {
     @DisplayName("Test para compronar que no se puede introducir una secuencia vacía")
     public void emptySequenceTest() {
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> new DNA(""));
-        assertEquals("❌ La secuencia de ADN no puede estar vacía.", exception.getMessage());
+        assertEquals("❌La secuencia de ADN no puede estar vacía.", exception.getMessage());
     }
 
     @Test
     @DisplayName("Test para comprobar que no se puede introducir una secuencia null")
     public void nullSequenceTest() {
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> new DNA(null));
-        assertEquals("❌ La secuencia de ADN no puede estar vacía.", exception.getMessage());
+        assertEquals("❌Error en la secuencia.", exception.getMessage());
     }
 }
