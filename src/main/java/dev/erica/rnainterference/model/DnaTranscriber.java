@@ -17,7 +17,7 @@ public class DnaTranscriber implements Transcriber {
         StringBuilder rna = new StringBuilder();
         
         for (char nucleotide : sequence.getSequence().toUpperCase().toCharArray()) {
-            rna.append(TRANSCRIPTION_MAP.getOrDefault(nucleotide, '?'));
+            rna.append(TRANSCRIPTION_MAP.get(nucleotide));
         }
         
         return rna.toString();
